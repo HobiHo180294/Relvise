@@ -1,0 +1,40 @@
+/* Fonts */
+
+/* Fonts */
+
+// Nullstyle
+@import "_reset.scss";
+
+// Palette
+@import "_palette.scss";
+
+// Adaptive font variables
+
+// Mixins
+@mixin textParameters(
+  $color: $secondTextColor,
+  $size: 14px,
+  $style: normal,
+  $weight: 500,
+  $lh: 1,
+  $ls: 0.2px,
+  $transform: none,
+  $opacity: 1,
+  $shadow: none,
+  $decoration: none
+) {
+  color: $color;
+  font-size: $size;
+  font-style: $style;
+  font-weight: $weight;
+  line-height: $lh;
+  letter-spacing: $ls;
+  text-transform: $transform;
+  opacity: $opacity;
+  text-shadow: $shadow;
+  text-decoration: $decoration;
+}
+
+body {
+  @include textParameters();
+}
