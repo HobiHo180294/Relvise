@@ -142,6 +142,12 @@ body {
     z-index: 2;
     margin-top: -111px;
   }
+
+  &__clients {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
 }
 
 /* Main block styles start*/
@@ -499,6 +505,75 @@ body {
 }
 /* Clients block styles end*/
 
+/* Subscribe section styles start*/
+.subscribe {
+  position: relative;
+  padding-bottom: 20px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 77px;
+    background-color: $textColor;
+  }
+
+  &__body {
+    position: relative;
+    z-index: 2;
+    padding: 30px 50px;
+    align-items: center;
+    background-color: $secondaryColor2;
+    border-radius: 2px;
+  }
+
+  &__title {
+    color: $lightTextColor;
+    font-size: 24px;
+    line-height: 133%;
+    letter-spacing: 0.1px;
+  }
+
+  &__form {
+    flex: 0 1 50%;
+    display: flex;
+    align-items: center;
+  }
+
+  &__input {
+    flex: 1 1 auto;
+    width: 100%;
+    min-height: 58px;
+    padding: 0 20px;
+    border: 1px solid $formBorderColor;
+    box-sizing: border-box;
+    border-radius: 5px 0 0 5px;
+    background-color: $inputBgColor;
+    color: $secondTextColor;
+    border-right: 0;
+
+    &:focus {
+      color: $dark;
+    }
+  }
+
+  &__button {
+    background-color: $primaryColor;
+    border: 1px solid $formBorderColor;
+    border-radius: 0 5px 5px 0;
+    display: flex;
+    min-height: 58px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: $lightTextColor;
+    padding: 0 22px;
+  }
+}
+/* Subscribe section styles end*/
+
 /* Page styles end*/
 
 /* Footer styles start*/
@@ -519,6 +594,14 @@ body {
 @media (max-width: 1080px) {
   .whoweare__content {
     padding-left: 50px;
+  }
+}
+
+@media (min-width: 1070px) {
+  .subscribe {
+    &__body {
+      margin: 0 30px;
+    }
   }
 }
 
@@ -615,6 +698,40 @@ body {
       &:not(:last-child) {
         margin-top: 50px;
       }
+    }
+  }
+}
+
+@media (max-width: 810px) {
+  .subscribe {
+    &__body {
+      margin: 0 -15px;
+      padding: 20px 15px;
+    }
+
+    &__title {
+      margin-bottom: 20px;
+    }
+
+    &__input {
+      padding: 0 15px;
+    }
+
+    &__button {
+      padding: 0 15px;
+    }
+  }
+}
+
+@media (min-width: 810px) {
+  .subscribe {
+    &__body {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__title {
+      max-width: 266px;
     }
   }
 }
