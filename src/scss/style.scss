@@ -475,6 +475,30 @@ body {
 }
 /* Whoweare section styles end*/
 
+/* Clients block styles start*/
+.clients {
+  padding: 50px 0;
+
+  &__items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    padding: 8px 15px;
+    flex: 0 1 16.6667%;
+    text-align: center;
+    min-width: 140px;
+
+    img {
+      max-width: 100%;
+    }
+  }
+}
+/* Clients block styles end*/
+
 /* Page styles end*/
 
 /* Footer styles start*/
@@ -638,6 +662,10 @@ body {
         margin-top: 50px;
       }
     }
+  }
+
+  .clients {
+    padding: 30px 0;
   }
 }
 
