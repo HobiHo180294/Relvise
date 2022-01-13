@@ -34,10 +34,11 @@
   text-decoration: $decoration;
 }
 
-/* Presets styles*/
+/* Presets and common styles*/
 body {
   font-family: "Montserrat", sans-serif;
   @include textParameters();
+  background-color: $bodyBgColor;
 }
 
 .wrapper {
@@ -64,6 +65,25 @@ body {
     top: 0;
     left: 0;
     object-fit: cover;
+  }
+}
+
+.header-block {
+  text-align: center;
+
+  &__title {
+    font-size: 40px;
+    line-height: 142%;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__sub-title {
+    color: $secondTextColor;
+    font-weight: 500;
+    line-height: 142%;
   }
 }
 
@@ -193,9 +213,6 @@ body {
 
 /* Services styles start*/
 .services {
-  &__container {
-  }
-
   &__column {
     flex: 0 1 33.333%;
     margin-bottom: 30px;
@@ -245,8 +262,60 @@ body {
     line-height: 142%;
   }
 }
-
 /* Services styles end*/
+
+/* Advantages section styles start*/
+.advantages {
+  padding: 80px 0;
+  &__container {
+  }
+
+  &__header {
+    margin-bottom: 50px;
+  }
+
+  &__body {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px -30px;
+  }
+
+  &__column {
+    padding: 0 15px;
+    flex: 0 1 25%;
+    margin-bottom: 30px;
+  }
+
+  &__item {
+    background-color: $lightTextColor;
+    padding: 30px;
+    text-align: center;
+
+    > *:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__icon {
+    height: 48px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  &__value {
+    font-size: 40px;
+    line-height: 142%;
+  }
+
+  &__text {
+    color: $secondTextColor;
+    letter-spacing: 0.1px;
+    font-size: 16px;
+    line-height: 150%;
+  }
+}
+/* Advantages section styles end*/
 
 /* Page styles end*/
 
@@ -261,6 +330,14 @@ body {
       img {
         object-position: right;
       }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .advantages {
+    &__column {
+      flex: 0 1 50%;
     }
   }
 }
@@ -295,12 +372,36 @@ body {
       }
     }
   }
+
+  .header-block {
+    &__title {
+      font-size: 35px;
+    }
+  }
+
+  .advantages {
+    padding: 50px 0;
+  }
 }
 
 @media (max-width: 767px) {
   .header {
     &__menu {
       margin-left: 40px;
+    }
+  }
+
+  .header-block {
+    &__title {
+      font-size: 30px;
+    }
+  }
+
+  .advantages {
+    padding: 30px 0;
+
+    &__header {
+      margin-bottom: 25px;
     }
   }
 }
@@ -315,6 +416,14 @@ body {
 
     &__column {
       padding: 0 15px;
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  .advantages {
+    &__column {
+      flex: 0 1 100%;
     }
   }
 }
