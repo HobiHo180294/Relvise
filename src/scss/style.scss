@@ -317,6 +317,80 @@ body {
 }
 /* Advantages section styles end*/
 
+/* Practice section styles start*/
+.practice {
+  padding: 125px 0 80px 0;
+
+  &__header {
+    margin-bottom: 45px;
+  }
+
+  &__body {
+    margin: 0 -20px -30px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__column {
+    padding: 0 20px;
+    margin-bottom: 30px;
+    flex: 0 1 25%;
+  }
+
+  &__item {
+  }
+}
+.header-block {
+  &__title {
+  }
+
+  &__sub-title {
+  }
+}
+.item-practice {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: $lightTextColor;
+
+  &__content {
+    padding: 30px;
+    flex: 1 1 auto;
+  }
+
+  &__link {
+    color: inherit;
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__title {
+    letter-spacing: 0.1px;
+    font-size: 16px;
+    line-height: 150%;
+    font-weight: 700;
+  }
+
+  &__text {
+    color: $secondTextColor;
+    line-height: 142%;
+    font-weight: 500;
+  }
+
+  &__image {
+    display: block;
+    padding-bottom: 138 / 230 * 100%;
+  }
+}
+/* Practice section styles end*/
+
 /* Page styles end*/
 
 /* Footer styles start*/
@@ -334,11 +408,25 @@ body {
   }
 }
 
+@media (max-width: 1040px) {
+  .practice {
+    &__column {
+      flex: 0 1 50%;
+    }
+  }
+}
+
 @media (max-width: 1000px) {
   .advantages {
     &__column {
       flex: 0 1 50%;
     }
+  }
+}
+
+@media (max-width: 993px) {
+  .practice {
+    padding: 40px 0 80px;
   }
 }
 
@@ -404,6 +492,14 @@ body {
       margin-bottom: 25px;
     }
   }
+
+  .practice {
+    padding-bottom: 40px;
+
+    &__header {
+      margin-bottom: 25px;
+    }
+  }
 }
 
 @media (min-width: 670px) {
@@ -416,6 +512,14 @@ body {
 
     &__column {
       padding: 0 15px;
+    }
+  }
+}
+
+@media (max-width: 630px) {
+  .practice {
+    &__column {
+      flex: 0 1 100%;
     }
   }
 }
