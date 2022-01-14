@@ -667,6 +667,53 @@ body {
 }
 /* Getintouch section styles end*/
 
+/* Contact section styles start*/
+.contact {
+  background-color: $lightTextColor;
+  padding: 42px 0;
+
+  &__container {
+  }
+
+  &__content {
+    padding: 0 0 20px 0;
+  }
+
+  &__title {
+    letter-spacing: 0.1px;
+    font-size: 24px;
+    line-height: 133%;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__text {
+    color: $secondTextColor;
+    line-height: 142%;
+    font-weight: 500;
+  }
+
+  &__button {
+    display: flex;
+    background-color: $primaryColor;
+    min-height: 58px;
+    border-radius: 5px;
+    padding: 5px 40px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: $lightTextColor;
+    transition: background-color 0.3s ease 0s;
+
+    &:hover {
+      background-color: $muddyPrimaryColor;
+    }
+  }
+}
+/* Contact section styles end*/
+
 /* Page styles end*/
 
 /* Footer styles start*/
@@ -904,6 +951,20 @@ body {
   .getintouch {
     &__header {
       margin-bottom: 30px;
+    }
+  }
+}
+
+@media (min-width: 767px) {
+  .contact {
+    &__body {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__content {
+      padding: 0 20px 0 0;
     }
   }
 }
