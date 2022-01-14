@@ -1,1 +1,1 @@
-"use strict";
+"use strict";document.querySelectorAll(".js-scroll").forEach((function(e){e.addEventListener("click",(function(){var e,t,n,r,o,i,c=this.getAttribute("href");e=c,t=1e3,n=document.querySelector(".header").clientHeight,r=document.querySelector(e).getBoundingClientRect().top-n,o=window.pageYOffset,i=null,requestAnimationFrame((function e(n){null===i&&(i=n);var c,l,u,a=n-i,s=(c=a,l=o,u=r,(c/=t/2)<1?u/2*c*c+l:-u/2*(--c*(c-2)-1)+l);window.scrollTo(0,s),a<t&&requestAnimationFrame(e)}))}))}));
