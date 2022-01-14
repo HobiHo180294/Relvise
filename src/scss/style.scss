@@ -574,6 +574,99 @@ body {
 }
 /* Subscribe section styles end*/
 
+/* Getintouch section styles start*/
+.getintouch {
+  padding: 80px 0 135px 0;
+
+  &__header {
+    margin-bottom: 80px;
+  }
+
+  &__items {
+    margin: 0 -15px;
+  }
+
+  &__item {
+    flex: 0 1 33.333%;
+  }
+}
+
+.item-getintouch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $lightTextColor;
+  padding: 50px 15px;
+
+  > * {
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+  &__emails {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__email {
+    color: inherit;
+    font-weight: 600;
+    line-height: 150%;
+    font-size: 16px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__label {
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.1px;
+  }
+
+  &__button {
+    display: flex;
+    min-height: 44px;
+    justify-content: center;
+    align-items: center;
+    color: $primaryColor;
+    font-weight: 600;
+    border-radius: 5px;
+    border: 1px solid $primaryColor;
+    line-height: 142%;
+    text-align: center;
+    padding: 5px 20px;
+    transition: all 0.3s ease 0s;
+
+    &:hover {
+      background-color: $primaryColor;
+      color: $lightTextColor;
+    }
+  }
+
+  &_active {
+    background-color: $textColor;
+    color: $lightTextColor;
+    padding: 80px 15px;
+
+    .item-getintouch {
+      &__button {
+        border: 1px solid $lightTextColor;
+        color: $lightTextColor;
+
+        &:hover {
+          border: 1px solid $primaryColor;
+        }
+      }
+    }
+  }
+}
+/* Getintouch section styles end*/
+
 /* Page styles end*/
 
 /* Footer styles start*/
@@ -671,6 +764,29 @@ body {
   .whoweare {
     &__content {
       padding: 0;
+    }
+  }
+
+  .getintouch {
+    padding: 50px 0;
+    &__header {
+      margin-bottom: 50px;
+    }
+  }
+
+  .item-getintouch {
+    &_active {
+      padding: 50px 15px;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .getintouch {
+    &__items {
+      display: flex;
+      align-items: center;
+      margin: 0;
     }
   }
 }
@@ -783,6 +899,12 @@ body {
 
   .clients {
     padding: 30px 0;
+  }
+
+  .getintouch {
+    &__header {
+      margin-bottom: 30px;
+    }
   }
 }
 
