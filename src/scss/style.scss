@@ -129,6 +129,10 @@ body {
     color: $secondTextColor;
     font-weight: 600;
     line-height: 24 / 14 * 100%;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 /* Header styles end*/
@@ -195,15 +199,26 @@ body {
     line-height: 150%;
     text-align: center;
     margin: 10px 0;
+    transition: all 0.3s ease 0s;
 
     &_orange {
       background: $primaryColor;
       color: $lightTextColor;
+
+      &:hover {
+        background-color: $lightTextColor;
+        color: $primaryColor;
+      }
     }
 
     &_border {
       color: $secondaryColor1;
       border: 1px solid $secondaryColor1;
+
+      &:hover {
+        background-color: $secondaryColor1;
+        color: $lightTextColor;
+      }
     }
   }
 
@@ -569,7 +584,13 @@ body {
     align-items: center;
     text-align: center;
     color: $lightTextColor;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
     padding: 0 22px;
+
+    &:hover {
+      background-color: $muddySubscribeColor;
+    }
   }
 }
 /* Subscribe section styles end*/
@@ -672,9 +693,6 @@ body {
   background-color: $lightTextColor;
   padding: 42px 0;
 
-  &__container {
-  }
-
   &__content {
     padding: 0 0 20px 0;
   }
@@ -717,7 +735,112 @@ body {
 /* Page styles end*/
 
 /* Footer styles start*/
+.footer {
+  &__top {
+    background-color: $secondaryColor2;
+    padding: 35px 0;
+  }
 
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+  }
+
+  &__column {
+    padding: 20px 15px;
+    flex: 0 1 16.6667%;
+
+    &:last-child {
+      flex: 0 1 33.334%;
+    }
+  }
+
+  &__label {
+    color: $lightTextColor;
+    font-size: 16px;
+    line-height: 150%;
+    margin-bottom: 20px;
+    letter-spacing: 0.1px;
+  }
+
+  &__bottom {
+    padding: 25px 0;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__copy {
+    color: $secondTextColor;
+    font-weight: 600;
+    line-height: 171%;
+  }
+}
+.menu-footer {
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    color: $lightTextColor;
+    font-weight: 600;
+    line-height: 171%;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+.contacts-footer {
+  display: flex;
+  flex-direction: column;
+  &__item {
+    padding-left: 34px;
+    line-height: 142%;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    min-height: 30px;
+    color: $lightTextColor;
+
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &_phone {
+      background: url(../img/footer/icons/01.svg) 0 0 no-repeat;
+    }
+
+    &_map {
+      background: url(../img/footer/icons/02.svg) 0 0 no-repeat;
+    }
+
+    &_email {
+      background: url(../img/footer/icons/03.svg) 0 0 no-repeat;
+    }
+  }
+}
+.social {
+  display: flex;
+  align-items: center;
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+}
 /* Footer styles end*/
 
 /* Media queries start*/
@@ -824,6 +947,16 @@ body {
   .item-getintouch {
     &_active {
       padding: 50px 15px;
+    }
+  }
+
+  .footer {
+    &__column {
+      flex: 0 1 25%;
+
+      &:last-child {
+        flex: 1 1 100%;
+      }
     }
   }
 }
@@ -953,6 +1086,17 @@ body {
       margin-bottom: 30px;
     }
   }
+
+  .footer {
+    &__container {
+      flex-direction: column;
+    }
+
+    &__copy {
+      margin-bottom: 15px;
+      text-align: center;
+    }
+  }
 }
 
 @media (min-width: 767px) {
@@ -965,6 +1109,14 @@ body {
 
     &__content {
       padding: 0 20px 0 0;
+    }
+  }
+}
+
+@media (max-width: 692px) {
+  .footer {
+    &__column {
+      flex: 0 1 50%;
     }
   }
 }
